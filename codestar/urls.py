@@ -16,10 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import logging
+
+logger = logging.getLogger(__name__)
+
+try:
+    import about.urls
+except ImportError as e:
+    logger.error(f"Failed to import about.urls: {e}")
 
 
 urlpatterns = [
-    path("about/", include("about.urls"), name="about-urls"),
+    # path('about/', include('about.urls')),
+    path('about/', include("about.urls"), name='about-urls'),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
