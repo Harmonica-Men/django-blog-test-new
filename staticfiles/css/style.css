@@ -43,7 +43,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: #188181;
 }
 
 .scale {
@@ -90,6 +90,17 @@ body {
     transform: skew(15deg);
     z-index: 100;
 }
+
+/* static/css/styles.css */
+.profile-image {
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .post-link {
     text-decoration: none;
